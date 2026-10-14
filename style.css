@@ -32,6 +32,7 @@
         z-index: 20; 
         align-items: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
     }
     header nav{
         width: 100%;
@@ -39,6 +40,7 @@
         border: none;
         text-decoration: none;
         background-color:#ffbf00;
+        border: 1px solid rgb(243, 241, 241);
         transition: background-color 0.3s ease;
         text-align: center;
         padding: 8px;
@@ -56,6 +58,7 @@
     }
     .logo {
 
+        
         color: white;
         width: 50%;
         display: flex;
@@ -76,23 +79,23 @@
         
     }
     .logo input[type="text"] {
+        background-color: rgb(243, 241, 241);
         border: none;
-        border-radius: 16px; 
         width: 100%;
         max-width: 400px;
         padding: 10px 20px;
         outline: none;
         font-size: 0.9rem;
-        transition: all 0.3s ease;
-    }
-    .logo input[type="text"]:focus {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-       
-    }
 
+    }
     main 
     {
         width: 100%; 
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .top 
     {
@@ -115,6 +118,7 @@
     .top a 
     {
         max-width: 400px;
+        border: 1px solid rgb(243, 241, 241);
         background-color: #2181e7; 
         text-decoration: none;
         color: #ffffff; 
@@ -133,11 +137,14 @@
 
     .lojas 
     {
+        
+        background-color: #0056b3;
+        margin: 10px;
         padding: 40px 20px;
         max-width: 1200px;
-        border-radius: 16px; 
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         display: flex;
+        justify-content: center;
         align-items: center;
         gap: 20px; 
     }
@@ -151,6 +158,8 @@
 
     .centro
     {
+        
+        color: #ffffff; 
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -159,6 +168,7 @@
     }
     .loja 
     {
+        color: black;
         background-color: rgb(52, 160, 255);
         padding: 20px;
         border-left: 5px solid #0056b3;
@@ -197,6 +207,7 @@
         color: #0056b3;
         font-weight: 500;
     }
+
     @media (max-width: 1177px) 
     {
         header 
