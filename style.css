@@ -35,15 +35,15 @@
 
     }
     header nav{
-        width: 100%;
-        max-width: 200px;
+       
         border: none;
         text-decoration: none;
         background-color:#ffbf00;
-        border: 1px solid rgb(243, 241, 241);
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
         transition: background-color 0.3s ease;
         text-align: center;
-        padding: 8px;
+        padding: 6px;
     }
     header nav a
     {
@@ -80,10 +80,11 @@
     }
     .logo input[type="text"] {
         background-color: rgb(243, 241, 241);
-        border: none;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
         width: 100%;
         max-width: 400px;
-        padding: 10px 20px;
+        padding: 6px 20px;
         outline: none;
         font-size: 0.9rem;
 
@@ -91,7 +92,6 @@
     main 
     {
         width: 100%; 
-       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -101,7 +101,7 @@
     {
         background-color: var(--color-top);
         width: 100%;
-        padding: 12px 20px;
+        padding: 12px;
         display: flex;
         justify-content: center;
         border-bottom: 4px solid #ffbf00;
@@ -118,7 +118,8 @@
     .top a 
     {
         max-width: 400px;
-        border: 1px solid rgb(243, 241, 241);
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
         background-color: #2181e7; 
         text-decoration: none;
         color: #ffffff; 
@@ -176,6 +177,7 @@
     }
     .cards 
     {
+        
         max-width: 1200px;
         margin: 30px auto;
         padding: 0 15px;
@@ -186,8 +188,11 @@
 
     .card 
     {
+        padding: 6px;
+        font-size: 12px;
         color: #ffffff;
         background-color: #2181e7;
+        border-radius: 8px;
         border: 1px solid #e2e8f0;
         text-align: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -207,60 +212,26 @@
         color: #0056b3;
         font-weight: 500;
     }
-
-    @media (max-width: 1177px) 
-    {
-        header 
-        {
-            justify-content: center;
-            align-items: center;
-        }
-        header nav
-        {
-            width: 50%;
-            max-width: 200px;
-            text-align: center;
-      
-        }
-        header nav a
-        {
-            width: 50%;
-            max-width: 200px;
     
-        }
-        .logo 
+    @media (max-width: 1195px) 
+    {
+        .top
         {
-            width: 100%;
-            justify-content: center;
-            align-items: center; 
-            gap: 15px;
-        }
-        .logo form 
-        {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; 
-           
-        }
-        .top nav
+            display: none;
+        }       
+    }  
+    @media (max-width: 997px)
+    {
+        header
         {
             display: none;
         }
-        .lojas
+        .cards
         {
-            flex-wrap: wrap;
-            justify-content: center;
+            grid-template-columns: 1fr;
         }
-        .centro
+        .lojas img
         {
-            flex-wrap: wrap;
-            background-color: #2181e7;
+            display: none;
         }
-        .top nav a
-        {
-            width: 100%;
-        }        
-
-    }   
+    } 
