@@ -1,0 +1,255 @@
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    :root
+    {
+        --back-header: #0056b3; 
+        --color-body: #71b8eb; 
+        --color-top: #0069d9; 
+    }
+
+
+    body {
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: var(--color-body);
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: var(--back-header);
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 20; 
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header nav{
+        width: 100%;
+        max-width: 200px;
+        border: none;
+        text-decoration: none;
+        background-color:#ffbf00;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        padding: 8px;
+    }
+    header nav a
+    {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    header nav:hover 
+    {
+        text-decoration: underline;
+        cursor: pointer;
+        
+    }
+    .logo {
+
+        color: white;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        
+    }
+
+    .logo h1 {
+   
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .logo form {
+        width: 60%;
+        
+    }
+    .logo input[type="text"] {
+        border: none;
+        border-radius: 16px; 
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 20px;
+        outline: none;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+    .logo input[type="text"]:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       
+    }
+
+    main 
+    {
+        width: 100%; 
+    }
+    .top 
+    {
+        background-color: var(--color-top);
+        width: 100%;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 4px solid #ffbf00;
+    }
+
+    .top nav 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+    }
+
+    .top a 
+    {
+        max-width: 400px;
+        background-color: #2181e7; 
+        text-decoration: none;
+        color: #ffffff; 
+        padding: 10px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+    }
+
+    .top a:hover 
+    {
+        color: #ffbf00;
+        text-decoration: none;
+    }
+
+    .lojas 
+    {
+        padding: 40px 20px;
+        max-width: 1200px;
+        border-radius: 16px; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .lojas > h2 
+    {
+        text-align: center;
+        color: #0056b3;
+        font-size: 1.8rem;
+    }
+
+    .centro
+    {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    .loja 
+    {
+        background-color: rgb(52, 160, 255);
+        padding: 20px;
+        border-left: 5px solid #0056b3;
+        margin: 10px;
+    }
+    .cards 
+    {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .card 
+    {
+        color: #ffffff;
+        background-color: #2181e7;
+        border: 1px solid #e2e8f0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover 
+    {
+        color:#ffbf00;
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .card h1 
+    {
+        font-size: 1.2rem;
+        color: #0056b3;
+        font-weight: 500;
+    }
+    @media (max-width: 1177px) 
+    {
+        header 
+        {
+            justify-content: center;
+            align-items: center;
+        }
+        header nav
+        {
+            width: 50%;
+            max-width: 200px;
+            text-align: center;
+      
+        }
+        header nav a
+        {
+            width: 50%;
+            max-width: 200px;
+    
+        }
+        .logo 
+        {
+            width: 100%;
+            justify-content: center;
+            align-items: center; 
+            gap: 15px;
+        }
+        .logo form 
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+           
+        }
+        .top nav
+        {
+            display: none;
+        }
+        .lojas
+        {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .centro
+        {
+            flex-wrap: wrap;
+            background-color: #2181e7;
+        }
+        .top nav a
+        {
+            width: 100%;
+        }        
+
+    }   
