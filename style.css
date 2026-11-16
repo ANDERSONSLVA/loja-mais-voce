@@ -1,186 +1,93 @@
+/* Reset básico e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+body {
+    font-family: 'Be Vietnam Pro', 'Arimo', sans-serif;
+    background-color: #f4f7f9;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    :root
-    {
-        --back-header: #0056b3; 
-        --color-body: #71b8eb; 
-        --color-top: #0069d9; 
-    }
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #0066cc, #0099cc);
+    color: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
 
-    body {
-        font-family: "Be Vietnam Pro", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        background-color: var(--color-body);
-        line-height: 1.6;
-    }
+/* Conteúdo Principal */
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    header {
+/* Grade de Produtos (Cards) */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
 
-        color: white;
-        background-color: var(--back-header);
-        border: 1px solid white;
-        padding: 10px 30px;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        position: sticky;
-        top: 0;
-        z-index: 20; 
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Cartão Individual */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-top: 5px solid #00a896; /* Detalhe em verde saúde */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
 
-    }
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
 
-    .top
-    {
-        background-color: var(--color-top);
-        display: flex;
-        align-items: stretch;
-        gap: 10px;
-    }
+/* Nome do Produto (Primeiro h2) */
+.card h2:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+}
 
-    .top input, a
-    {
-        padding: 5px 15px;   
-        box-sizing: border-box;
-        border: 1px solid white;
-        border-radius: 4px;
-        outline: none;
-    }
-    .top a
-    {
-        color: white;
-        background-color: #007bff;
-        display: inline-flex;
-        align-items: center; 
-        text-decoration: none;
-    }
-    .top a:hover 
-    {
-        text-decoration: underline;
-        cursor: pointer;
-        
-    }
+/* Preço (Segundo h2) */
+.card h2:last-child {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #008060;
+    background-color: #e6f5f0;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
 
-    main 
-    {
-        width: 100%; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .cards 
-    {
-        width: 100%;
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 0 15px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .card 
-    {
-        padding: 6px;
-        font-size: 12px;
-        color: #ffffff;
-        background-color: #2181e7;
-        border-radius: 4px;
-        border: 1px solid #e2e8f0;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover 
-    {
-        color:#ffbf00;
-        cursor: pointer;
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    }
-
-    .card h1 
-    {
-        font-size: 1.2rem;
-        color: #0056b3;
-        font-weight: 500;
-    }
-    .lojas 
-    {
-        color: white;
-        background-color: rgb(52, 160, 255);
-       
-        border: 1px solid white;
-        width: 100%;    
-        margin: 10px;
-        padding: 40px 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        display: flex;
-        justify-content: center;
-        gap: 30px; 
-    }
-
-    .lojas > h2 
-    {
-        text-align: center;
-        font-size: 1.8rem;
-    }
-    .imagem
-    {
-        width: 50%;
-        border: 1px solid white;
-        border-radius: 4px;
-    }
-    .centro
-    {
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 5px;
-    }
-    .loja 
-    {
-        background-color: #2181e7;
-        padding: 10px;
-        border: 1px solid white;
-        border-radius: 4px;
-    }
-    .loja:hover
-    {
-        color:#ffbf00;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
-        cursor: pointer;
-    }
-    
-    @media (max-width: 768px) 
-    {   
-        header
-        {
-            flex-direction: column;
-        }
-        .cards
-        {
-            grid-template-columns: 1fr;
-        }
-        .lojas img
-        {
-            display: none;
-        }
-        .lojas
-        {
-        
-            align-items: center;
-        }
-       
-    }  
+/* Rodapé */
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
